@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import './App.css';
+import AppHeader from './components/header';
+import AppHome from './views/home';
+import { Layout } from 'antd';
+const { Header, Content, Footer } = Layout;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Layout className="mainLayout">
+      <Header>
+        <AppHeader/>
+      </Header>
+      <Content>
+        <AppHome/>
+      </Content>    
+    </Layout>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
